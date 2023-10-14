@@ -1,5 +1,17 @@
-module.exports = ({ env }) => ({
+export default ({ env }) => ({
+  apiToken: {
+    salt: env("API_TOKEN_SALT", "someRandomLongString"),
+  },
+  auditLogs: {
+    // only accessible with an Enterprise plan
+    enabled: env.bool("AUDIT_LOGS_ENABLED", true),
+  },
   auth: {
-    secret: env('ADMIN_JWT_SECRET', 'b4dbad35-6caa-4f84-be56-90d0d3bc2fdf'),
+    secret: env("ADMIN_JWT_SECRET", "someSecretKey"),
+  },
+  transfer: {
+    token: {
+      salt: env("TRANSFER_TOKEN_SALT", "anotherRandomLongString"),
+    },
   },
 });
