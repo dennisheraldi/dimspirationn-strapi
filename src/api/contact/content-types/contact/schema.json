@@ -24,13 +24,13 @@
         "images"
       ]
     },
-    "description": {
-      "type": "text",
-      "default": "If you have a project in mind or need captivating illustrations, I'm here to collaborate"
-    },
     "email": {
       "type": "string",
       "default": "dimspirationn@gmail.com"
+    },
+    "description": {
+      "type": "richtext",
+      "default": "If you have a project in mind or need captivating illustrations, I'm here to collaborate"
     }
   }
 }
